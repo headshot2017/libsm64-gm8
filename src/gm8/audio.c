@@ -1,14 +1,13 @@
-#include "audio.h"
+/*#include "audio.h"
 
 #include <stdio.h>
 #include <pthread.h>
 #include <unistd.h>
 #include <sys/time.h>
 
-extern "C" {
-#include "../src/libsm64.h"
-#include "context.h"
-}
+#include <SDL2/SDL.h>
+
+#include "../libsm64.h"
 
 static SDL_AudioDeviceID dev;
 
@@ -50,7 +49,7 @@ void* audio_thread(void* keepAlive)
 	}
 }
 
-void audio_init()
+void gm8_audio_init()
 {
 	if (SDL_InitSubSystem(SDL_INIT_AUDIO) < 0) {
 		fprintf(stderr, "SDL_InitSubSystem(SDL_INIT_AUDIO) failed: %s\n", SDL_GetError());
@@ -75,3 +74,4 @@ void audio_init()
 	pthread_create(&gSoundThread, NULL, audio_thread, NULL);
 }
 
+*/

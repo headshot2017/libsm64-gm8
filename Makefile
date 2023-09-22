@@ -11,7 +11,7 @@ else
 endif
 CFLAGS := -fno-strict-aliasing -g -Wall -Wno-unused-function -fPIC -fvisibility=hidden -DSM64_LIB_EXPORT -DGBI_FLOATS -DVERSION_US -DNO_SEGMENTED_MEMORY
 
-SRC_DIRS  := src src/decomp src/decomp/engine src/decomp/include/PR src/decomp/game src/decomp/pc src/decomp/pc/audio src/decomp/mario src/decomp/tools src/decomp/audio
+SRC_DIRS  := src src/gm8 src/decomp src/decomp/engine src/decomp/include/PR src/decomp/game src/decomp/pc src/decomp/pc/audio src/decomp/mario src/decomp/tools src/decomp/audio
 BUILD_DIR := build
 DIST_DIR  := dist
 ALL_DIRS  := $(addprefix $(BUILD_DIR)/,$(SRC_DIRS))
@@ -33,7 +33,7 @@ TEST_SRCS_CPP := test/main.cpp test/audio.cpp
 TEST_OBJS     := $(foreach file,$(TEST_SRCS_C),$(BUILD_DIR)/$(file:.c=.o)) $(foreach file,$(TEST_SRCS_CPP),$(BUILD_DIR)/$(file:.cpp=.o))
 
 ifeq ($(OS),Windows_NT)
-  LIB_FILE := $(DIST_DIR)/sm64.dll
+  LIB_FILE := $(DIST_DIR)/libsm64.dll
   TEST_FILE := $(DIST_DIR)/run-test.exe
 endif
 
