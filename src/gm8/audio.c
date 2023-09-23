@@ -1,6 +1,8 @@
-/*#include "audio.h"
+#include "audio.h"
 
+#include <windows.h>
 #include <stdio.h>
+#include <string.h>
 #include <pthread.h>
 #include <unistd.h>
 #include <sys/time.h>
@@ -52,7 +54,9 @@ void* audio_thread(void* keepAlive)
 void gm8_audio_init()
 {
 	if (SDL_InitSubSystem(SDL_INIT_AUDIO) < 0) {
-		fprintf(stderr, "SDL_InitSubSystem(SDL_INIT_AUDIO) failed: %s\n", SDL_GetError());
+		FILE* f = fopen("libsm64-gm8-error.log", "w");
+		fprintf(f, "SDL_InitSubSystem(SDL_INIT_AUDIO) failed: %s\n", SDL_GetError());
+		fclose(f);
 		return;
 	}
 
@@ -65,7 +69,9 @@ void gm8_audio_init()
 	want.callback = NULL;
 	dev = SDL_OpenAudioDevice(NULL, 0, &want, &have, 0);
 	if (dev == 0) {
-		fprintf(stderr, "SDL_OpenAudio error: %s\n", SDL_GetError());
+		FILE* f = fopen("libsm64-gm8-error.log", "w");
+		fprintf(f, "SDL_OpenAudio error: %s\n", SDL_GetError());
+		fclose(f);
 		return;
 	}
 	SDL_PauseAudioDevice(dev, 0);
@@ -73,5 +79,3 @@ void gm8_audio_init()
 	// it's best to run audio in a separate thread
 	pthread_create(&gSoundThread, NULL, audio_thread, NULL);
 }
-
-*/

@@ -51,7 +51,7 @@ __declspec(dllexport) double gm8_libsm64_init()
     sm64_audio_init(rom);
     sm64_static_surfaces_load( surfaces, surfaces_count );
 
-    //gm8_audio_init();
+    gm8_audio_init();
 
     free(texture);
     free(rom);
