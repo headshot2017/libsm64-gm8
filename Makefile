@@ -53,7 +53,7 @@ $(BUILD_DIR)/%.o: %.cpp $(IMPORTED)
 	$(CXX) -c $(CFLAGS) -I src/decomp/include -o $@ $<
 
 $(LIB_FILE): $(O_FILES)
-	$(CC) $(LDFLAGS) -o $@ $^ -lSDL2
+	$(CC) $(LDFLAGS) -o $@ $^ -lSDL2 -lpng
 
 $(LIB_H_FILE): src/libsm64.h
 	cp -f $< $@
