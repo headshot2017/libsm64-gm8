@@ -5,4 +5,5 @@
 compile_commands.json
 /.cache/
 *.gb1
+*.ged
 texture.png
