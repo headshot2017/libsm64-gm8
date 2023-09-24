@@ -265,3 +265,15 @@ __declspec(dllexport) double gm8_libsm64_mario_get_geometry_uvY(double id, doubl
 {
     return marioGeometry.uv[(int)vertex+1];
 }
+
+__declspec(dllexport) double gm8_libsm64_play_music(double seq)
+{
+    sm64_play_music(0, (uint16_t)seq, 0);
+    return 0;
+}
+
+__declspec(dllexport) double gm8_libsm64_stop_music()
+{
+    sm64_stop_background_music(sm64_get_current_background_music());
+    return 0;
+}
