@@ -148,7 +148,8 @@ __declspec(dllexport) double gm8_libsm64_init()
     sm64_global_terminate();
     sm64_global_init( rom, texture );
     sm64_audio_init(rom);
-    sm64_static_surfaces_load( surfaces, surfaces_count );
+	if (surfaces != NULL)
+		sm64_static_surfaces_load( surfaces, surfaces_count );
 
 	save_png("texture.png", SM64_TEXTURE_WIDTH, SM64_TEXTURE_HEIGHT, 8, PNG_COLOR_TYPE_RGB_ALPHA, texture, 4*SM64_TEXTURE_WIDTH, PNG_TRANSFORM_IDENTITY);
 
@@ -157,6 +158,41 @@ __declspec(dllexport) double gm8_libsm64_init()
     free(texture);
     free(rom);
     return 1;
+}
+
+// [Binary] i copypasted this from libsm64-gzdoom lol
+__declspec(dllexport) double gm8_libsm64_remove_static_surfaces(double removeCount)
+{
+	surfaces_count -= removeCount;
+	if (surfaces_count <= 0)
+		surfaces_count = 0;
+	surfaces = (struct SM64Surface*)realloc(surfaces, sizeof(struct SM64Surface) * surfaces_count);
+	return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_add_static_surface(double surfaceType, double force, double terrainType, double v00, double v01, double v02, double v10, double v11, double v12, double v20, double v21, double v22)
+{
+	surfaces_count++;
+	surfaces = (struct SM64Surface*)realloc(surfaces, sizeof(struct SM64Surface) * surfaces_count);
+	surfaces[surfaces_count-1].type = surfaceType;
+	surfaces[surfaces_count-1].force = force;
+	surfaces[surfaces_count-1].terrain = terrainType;
+	surfaces[surfaces_count-1].vertices[0][0] = v00;
+	surfaces[surfaces_count-1].vertices[0][1] = v01;
+	surfaces[surfaces_count-1].vertices[0][2] = v02;
+	surfaces[surfaces_count-1].vertices[1][0] = v10;
+	surfaces[surfaces_count-1].vertices[1][1] = v11;
+	surfaces[surfaces_count-1].vertices[1][2] = v12;
+	surfaces[surfaces_count-1].vertices[2][0] = v20;
+	surfaces[surfaces_count-1].vertices[2][1] = v21;
+	surfaces[surfaces_count-1].vertices[2][2] = v22;
+	return surfaces_count;
+}
+__declspec(dllexport) double gm8_libsm64_load_static_surface()
+{
+	surfaces_unload_all();
+	sm64_static_surfaces_load( surfaces, surfaces_count );
+	return 1;
 }
 
 __declspec(dllexport) double gm8_libsm64_mario_create(double x, double y, double z)
