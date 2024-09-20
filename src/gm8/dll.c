@@ -11,6 +11,7 @@
 
 #include <png.h>
 #include "../libsm64.h"
+#include "../load_surfaces.h"
 
 #include "audio.h"
 #include "level.h"
@@ -132,9 +133,9 @@ static int save_png(const char* filename, int width, int height,
    return r;
  }
 
-struct SM64MarioInputs marioInputs;
-struct SM64MarioState marioState;
-struct SM64MarioGeometryBuffers marioGeometry;
+static struct SM64MarioInputs marioInputs;
+static struct SM64MarioState marioState;
+static struct SM64MarioGeometryBuffers marioGeometry;
 
 __declspec(dllexport) double gm8_libsm64_init()
 {
@@ -148,8 +149,6 @@ __declspec(dllexport) double gm8_libsm64_init()
     sm64_global_terminate();
     sm64_global_init( rom, texture );
     sm64_audio_init(rom);
-	if (surfaces != NULL)
-		sm64_static_surfaces_load( surfaces, surfaces_count );
 
 	save_png("texture.png", SM64_TEXTURE_WIDTH, SM64_TEXTURE_HEIGHT, 8, PNG_COLOR_TYPE_RGB_ALPHA, texture, 4*SM64_TEXTURE_WIDTH, PNG_TRANSFORM_IDENTITY);
 
@@ -163,10 +162,22 @@ __declspec(dllexport) double gm8_libsm64_init()
 // [Binary] i copypasted this from libsm64-gzdoom lol
 __declspec(dllexport) double gm8_libsm64_remove_static_surfaces(double removeCount)
 {
-	surfaces_count -= removeCount;
+	if (removeCount < 0)
+		surfaces_count = 0;
+	else
+		surfaces_count -= removeCount;
+
 	if (surfaces_count <= 0)
 		surfaces_count = 0;
-	surfaces = (struct SM64Surface*)realloc(surfaces, sizeof(struct SM64Surface) * surfaces_count);
+
+	if (surfaces_count)
+		surfaces = (struct SM64Surface*)realloc(surfaces, sizeof(struct SM64Surface) * surfaces_count);
+	else if (surfaces)
+	{
+		free(surfaces);
+		surfaces = NULL;
+	}
+
 	return 1;
 }
 
@@ -174,18 +185,18 @@ __declspec(dllexport) double gm8_libsm64_add_static_surface(double surfaceType, 
 {
 	surfaces_count++;
 	surfaces = (struct SM64Surface*)realloc(surfaces, sizeof(struct SM64Surface) * surfaces_count);
-	surfaces[surfaces_count-1].type = surfaceType;
-	surfaces[surfaces_count-1].force = force;
-	surfaces[surfaces_count-1].terrain = terrainType;
-	surfaces[surfaces_count-1].vertices[0][0] = v00;
-	surfaces[surfaces_count-1].vertices[0][1] = v01;
-	surfaces[surfaces_count-1].vertices[0][2] = v02;
-	surfaces[surfaces_count-1].vertices[1][0] = v10;
-	surfaces[surfaces_count-1].vertices[1][1] = v11;
-	surfaces[surfaces_count-1].vertices[1][2] = v12;
-	surfaces[surfaces_count-1].vertices[2][0] = v20;
-	surfaces[surfaces_count-1].vertices[2][1] = v21;
-	surfaces[surfaces_count-1].vertices[2][2] = v22;
+	surfaces[surfaces_count-1].type = (int16_t)surfaceType;
+	surfaces[surfaces_count-1].force = (int16_t)force;
+	surfaces[surfaces_count-1].terrain = (uint16_t)terrainType;
+	surfaces[surfaces_count-1].vertices[0][0] = (int32_t)v00;
+	surfaces[surfaces_count-1].vertices[0][1] = (int32_t)v01;
+	surfaces[surfaces_count-1].vertices[0][2] = (int32_t)v02;
+	surfaces[surfaces_count-1].vertices[1][0] = (int32_t)v10;
+	surfaces[surfaces_count-1].vertices[1][1] = (int32_t)v11;
+	surfaces[surfaces_count-1].vertices[1][2] = (int32_t)v12;
+	surfaces[surfaces_count-1].vertices[2][0] = (int32_t)v20;
+	surfaces[surfaces_count-1].vertices[2][1] = (int32_t)v21;
+	surfaces[surfaces_count-1].vertices[2][2] = (int32_t)v22;
 	return surfaces_count;
 }
 __declspec(dllexport) double gm8_libsm64_load_static_surface()
@@ -247,6 +258,56 @@ __declspec(dllexport) double gm8_libsm64_mario_get_posZ(double id)
     return marioState.position[2];
 }
 
+__declspec(dllexport) double gm8_libsm64_mario_get_velX(double id)
+{
+    return marioState.velocity[0];
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_get_velY(double id)
+{
+    return marioState.velocity[1];
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_get_velZ(double id)
+{
+    return marioState.velocity[2];
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_get_faceAngle(double id)
+{
+    return marioState.faceAngle;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_get_health_hex(double id)
+{
+    return marioState.health;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_get_health(double id)
+{
+    return marioState.health >> 8;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_get_action(double id)
+{
+    return marioState.action;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_get_flags(double id)
+{
+    return marioState.flags;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_get_particleFlags(double id)
+{
+    return marioState.particleFlags;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_get_invincTimer(double id)
+{
+    return marioState.invincTimer;
+}
+
 __declspec(dllexport) double gm8_libsm64_mario_get_geometry_posX(double id, double triangleVertex)
 {
     return marioGeometry.position[(int)triangleVertex+0];
@@ -300,6 +361,131 @@ __declspec(dllexport) double gm8_libsm64_mario_get_geometry_uvX(double id, doubl
 __declspec(dllexport) double gm8_libsm64_mario_get_geometry_uvY(double id, double vertex)
 {
     return marioGeometry.uv[(int)vertex+1];
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_action(double id, double action)
+{
+	sm64_set_mario_action((int32_t)id, (uint32_t)action);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_action_arg(double id, double action, double actionArg)
+{
+	sm64_set_mario_action_arg((int32_t)id, (uint32_t)action, (uint32_t)actionArg);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_animation(double id, double animID)
+{
+	sm64_set_mario_animation((int32_t)id, (int32_t)animID);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_anim_frame(double id, double animFrame)
+{
+	sm64_set_mario_anim_frame((int32_t)id, (int16_t)animFrame);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_state(double id, double flags)
+{
+	sm64_set_mario_state((int32_t)id, (uint32_t)flags);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_position(double id, double x, double y, double z)
+{
+	sm64_set_mario_position((int32_t)id, x, y, z);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_angle(double id, double x, double y, double z)
+{
+	sm64_set_mario_angle((int32_t)id, x, y, z);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_faceangle(double id, double y)
+{
+	sm64_set_mario_faceangle((int32_t)id, y);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_velocity(double id, double x, double y, double z)
+{
+	sm64_set_mario_velocity((int32_t)id, x, y, z);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_forward_velocity(double id, double vel)
+{
+	sm64_set_mario_forward_velocity((int32_t)id, vel);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_invincibility(double id, double timer)
+{
+	sm64_set_mario_invincibility((int32_t)id, (int16_t)timer);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_water_level(double id, double level)
+{
+	sm64_set_mario_water_level((int32_t)id, (signed int)level);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_gas_level(double id, double level)
+{
+	sm64_set_mario_gas_level((int32_t)id, (signed int)level);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_health_hex(double id, double health)
+{
+	sm64_set_mario_health((int32_t)id, (uint16_t)health);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_set_health(double id, double health)
+{
+	sm64_set_mario_health((int32_t)id, ((uint16_t)health) << 8);
+    return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_take_damage(double id, double damage, double subtype, double x, double y, double z)
+{
+	sm64_mario_take_damage((int32_t)id, (uint32_t)damage, (uint32_t)subtype, x, y, z);
+	return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_heal(double id, double healCounter)
+{
+	sm64_mario_heal((int32_t)id, (uint8_t)healCounter);
+	return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_kill(double id)
+{
+	sm64_mario_kill((int32_t)id);
+	return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_interact_cap(double id, double capFlag, double capTime, double playMusic)
+{
+	sm64_mario_interact_cap((int32_t)id, (uint32_t)capFlag, (uint16_t)capTime, (uint8_t)playMusic);
+	return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_extend_cap(double id, double capTime)
+{
+	sm64_mario_extend_cap((int32_t)id, (uint16_t)capTime);
+	return 1;
+}
+
+__declspec(dllexport) double gm8_libsm64_mario_attack(double id, double x, double y, double z, double hitboxHeight)
+{
+	return (sm64_mario_attack((int32_t)id, x, y, z, hitboxHeight)) ? 1 : 0;
 }
 
 __declspec(dllexport) double gm8_libsm64_play_music(double seq)
