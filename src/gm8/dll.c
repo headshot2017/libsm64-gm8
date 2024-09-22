@@ -195,18 +195,18 @@ DLLEXPORT double gm8_libsm64_add_static_surface(double surfaceType, double force
 	surfaces[surfaces_count-1].type = (int16_t)surfaceType;
 	surfaces[surfaces_count-1].force = (int16_t)force;
 	surfaces[surfaces_count-1].terrain = (uint16_t)terrainType;
-	surfaces[surfaces_count-1].vertices[0][0] = (int32_t)v00;
-	surfaces[surfaces_count-1].vertices[0][1] = (int32_t)v01;
-	surfaces[surfaces_count-1].vertices[0][2] = (int32_t)v02;
-	surfaces[surfaces_count-1].vertices[1][0] = (int32_t)v10;
-	surfaces[surfaces_count-1].vertices[1][1] = (int32_t)v11;
-	surfaces[surfaces_count-1].vertices[1][2] = (int32_t)v12;
-	surfaces[surfaces_count-1].vertices[2][0] = (int32_t)v20;
-	surfaces[surfaces_count-1].vertices[2][1] = (int32_t)v21;
-	surfaces[surfaces_count-1].vertices[2][2] = (int32_t)v22;
+	double vertices[3][3] = {{v00,v01,v02}, {v10,v11,v12}, {v20,v21,v22}};
+	for (int i=0; i<3; i++)
+	{
+		for (int j=0; j<3; j++)
+		{
+			surfaces[surfaces_count-1].vertices[i][j] = (int32_t)vertices[i][j];
+		}
+	}
 	return surfaces_count;
 }
-DLLEXPORT double gm8_libsm64_load_static_surface()
+
+DLLEXPORT double gm8_libsm64_load_static_surfaces()
 {
 	surfaces_unload_all();
 	sm64_static_surfaces_load( surfaces, surfaces_count );
