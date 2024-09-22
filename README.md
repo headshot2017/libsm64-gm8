@@ -5,7 +5,7 @@ If you want to mod games with this, you'll need Game Maker 8 Pro.
 
 An example project is located in the 'gmk' folder.
 
-![img](preview.png)
+![img](screenshot.png)
 
 
 ## Building the DLL
