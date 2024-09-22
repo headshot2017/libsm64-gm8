@@ -210,7 +210,16 @@ DLLEXPORT double gm8_libsm64_load_static_surfaces()
 {
 	surfaces_unload_all();
 	sm64_static_surfaces_load( surfaces, surfaces_count );
-	return 1;
+	return surfaces_count;
+}
+
+DLLEXPORT double gm8_libsm64_get_static_surface(double ind, double vertInd)
+{
+	if (ind < 0 || ind >= surfaces_count || vertInd < 0 || vertInd >= 9)
+		return 0;
+	int i = ((int)vertInd) / 3;
+	int j = ((int)vertInd) % 3;
+	return surfaces[(int)ind].vertices[i][j];
 }
 
 DLLEXPORT double gm8_libsm64_mario_create(double x, double y, double z)

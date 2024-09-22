@@ -678,9 +678,21 @@
 					"name": "libsm64_load_static_surfaces",
 					"extname": "gm8_libsm64_load_static_surfaces",
 					"calltype": 11,
-					"helpline": "libsm64_load_static_surfaces(): Apply changes to static surfaces to libsm64",
+					"helpline": "libsm64_load_static_surfaces(): Apply changes to static surfaces to libsm64. Returns total surface count",
 					"hidden": false,
 					"argtypes": [],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_get_static_surface",
+					"extname": "gm8_libsm64_get_static_surface",
+					"calltype": 11,
+					"helpline": "libsm64_get_static_surface(index, vertexIndex): Get a vertex position from a currently loaded static surface",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
 					"returntype": 2
 				},
 				{
