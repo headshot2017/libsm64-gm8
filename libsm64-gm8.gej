@@ -676,7 +676,7 @@
 				},
 				{
 					"name": "libsm64_load_static_surfaces",
-					"extname": "gm8_libsm64_load_static_surface",
+					"extname": "gm8_libsm64_load_static_surfaces",
 					"calltype": 11,
 					"helpline": "libsm64_load_static_surfaces(): Apply changes to static surfaces to libsm64",
 					"hidden": false,
