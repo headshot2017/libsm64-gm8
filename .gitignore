@@ -6,4 +6,6 @@ compile_commands.json
 /.cache/
 *.gb1
 *.ged
+*.gex
+gmk/*.dll
 texture.png
