@@ -58,6 +58,10 @@ $(LIB_FILE): $(O_FILES)
 $(LIB_H_FILE): src/libsm64.h
 	cp -f $< $@
 
+extension: $(LIB_FILE)
+	python gm82gex.py libsm64-gm8.gej --noinstall
+	mv libsm64-gm8.gex gmk/
+
 
 test/level.c test/level.h: ./import-test-collision.py
 	./import-test-collision.py
@@ -75,7 +79,7 @@ else
 	$(CC) -o $@ $(TEST_OBJS) $(LIB_FILE) -lGLEW -lGL -lSDL2 -lSDL2main -lm -lpthread
 endif
 
-lib: $(LIB_FILE) $(LIB_H_FILE)
+lib: $(LIB_FILE) $(LIB_H_FILE) extension
 
 test: $(TEST_FILE) $(LIB_H_FILE)
 

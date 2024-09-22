@@ -1,0 +1,5677 @@
+{
+	"name": "libsm64-gm8",
+	"folder": "libsm64-gm8",
+	"version": "1.0",
+	"author": "Headshotnoby",
+	"date": "20/9/2024",
+	"license": "Free to use",
+	"description": "Game Maker 8 bindings for libsm64, which allows inserting Mario from SM64 into your game",
+	"helpfile": "",
+	"hidden": false,
+	"dependencies": [],
+	"files": [
+		{
+			"filename": "libsm64.dll",
+			"origname": "dist/libsm64.dll",
+			"kind": 1,
+			"init": "",
+			"final": "",
+			"functions": [
+				{
+					"name": "libsm64_init",
+					"extname": "gm8_libsm64_init",
+					"calltype": 11,
+					"helpline": "libsm64_init(): Initialize the library",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_create",
+					"extname": "gm8_libsm64_mario_create",
+					"calltype": 11,
+					"helpline": "libsm64_init(x,y,z): Create an instance of Mario in specified x,y,z coordinates and returns Mario ID",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_input",
+					"extname": "gm8_libsm64_mario_set_input",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_input(jump,attack,crouch,camX,camZ,stickX,stickY): Set Mario instance's input",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_tick",
+					"extname": "gm8_libsm64_mario_tick",
+					"calltype": 11,
+					"helpline": "libsm64_mario_tick(id): Run a Mario instance each step",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_triangles_used",
+					"extname": "gm8_libsm64_mario_get_triangles_used",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_triangles_used(id): Get amount of triangles used in Mario model, for drawing",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_posX",
+					"extname": "gm8_libsm64_mario_get_posX",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_posX(id): Get a Mario's X position",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_posY",
+					"extname": "gm8_libsm64_mario_get_posY",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_posY(id): Get a Mario's Y position",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_posZ",
+					"extname": "gm8_libsm64_mario_get_posZ",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_posZ(id): Get a Mario's Z position",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_posX",
+					"extname": "gm8_libsm64_mario_get_geometry_posX",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_posX(id,vertexInd): Get Mario geometry pos X on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_posY",
+					"extname": "gm8_libsm64_mario_get_geometry_posY",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_posY(id,vertexInd): Get Mario geometry pos Y on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_posZ",
+					"extname": "gm8_libsm64_mario_get_geometry_posZ",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_posZ(id,vertexInd): Get Mario geometry pos Z on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_normalX",
+					"extname": "gm8_libsm64_mario_get_geometry_normalX",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_normalX(id,vertexInd): Get Mario geometry normal X on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_normalY",
+					"extname": "gm8_libsm64_mario_get_geometry_normalY",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_normalY(id,vertexInd): Get Mario geometry normal Y on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_normalZ",
+					"extname": "gm8_libsm64_mario_get_geometry_normalZ",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_normalZ(id,vertexInd): Get Mario geometry normal Z on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_colorRed",
+					"extname": "gm8_libsm64_mario_get_geometry_colorRed",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_colorRed(id,vertexInd): Get Mario geometry red color on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_colorGreen",
+					"extname": "gm8_libsm64_mario_get_geometry_colorGreen",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_colorGreen(id,vertexInd): Get Mario geometry green color on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_colorBlue",
+					"extname": "gm8_libsm64_mario_get_geometry_colorBlue",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_colorBlue(id,vertexInd): Get Mario geometry blue color on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_uvX",
+					"extname": "gm8_libsm64_mario_get_geometry_uvX",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_uvX(id,vertexInd): Get Mario geometry texture X coordinate on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_geometry_uvY",
+					"extname": "gm8_libsm64_mario_get_geometry_uvY",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_geometry_uvY(id,vertexInd): Get Mario geometry texture Y coordinate on specified index",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_play_music",
+					"extname": "gm8_libsm64_play_music",
+					"calltype": 11,
+					"helpline": "libsm64_play_music(seq): Play music from SM64. See SEQ_* constants",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_stop_music",
+					"extname": "gm8_libsm64_stop_music",
+					"calltype": 11,
+					"helpline": "libsm64_stop_music(): Stop current SM64 music.",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_velX",
+					"extname": "gm8_libsm64_mario_get_velX",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_velX(id): Get a Mario's X velocity",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_velY",
+					"extname": "gm8_libsm64_mario_get_velY",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_velY(id): Get a Mario's Y velocity",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_velZ",
+					"extname": "gm8_libsm64_mario_get_velZ",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_velZ(id): Get a Mario's Z velocity",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_faceAngle",
+					"extname": "gm8_libsm64_mario_get_faceAngle",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_faceAngle(id): Get the angle in radians that Mario is facing",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_health_hex",
+					"extname": "gm8_libsm64_mario_get_health_hex",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_health_hex(id): Get a Mario's current health (hex, advanced only)",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_health",
+					"extname": "gm8_libsm64_mario_get_health",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_health(id): Get a Mario's current health pieces",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_action",
+					"extname": "gm8_libsm64_mario_get_action",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_action(id): Get a Mario's current action",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_flags",
+					"extname": "gm8_libsm64_mario_get_flags",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_flags(id): Get a Mario's current state flags",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_particleFlags",
+					"extname": "gm8_libsm64_mario_get_particleFlags",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_particleFlags(id): Get a Mario's current particle flags",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_get_invincTimer",
+					"extname": "gm8_libsm64_mario_get_invincTimer",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_invincTimer(id): Get a Mario's current invincibility timer",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_action",
+					"extname": "gm8_libsm64_mario_set_action",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_action(id, action): Change a Mario's current action",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_action_arg",
+					"extname": "gm8_libsm64_mario_set_action_arg",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_action_arg(id, action, actionArg): Change a Mario's current action, with an additional argument",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_animation",
+					"extname": "gm8_libsm64_mario_set_animation",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_animation(id, animID): Set a Mario's current animation",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_anim_frame",
+					"extname": "gm8_libsm64_mario_set_anim_frame",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_anim_frame(id, animFrame): Set a Mario's current animation frame",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_state",
+					"extname": "gm8_libsm64_mario_set_state",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_state(id, flags): Set a Mario's current state flags",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_position",
+					"extname": "gm8_libsm64_mario_set_position",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_position(id, x, y, z): Set a Mario's current position",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_angle",
+					"extname": "gm8_libsm64_mario_set_angle",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_angle(id, x, y, z): Set a Mario's current angle",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_faceAngle",
+					"extname": "gm8_libsm64_mario_set_faceangle",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_faceAngle(id, angle): Set the angle in radians that Mario should face",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_velocity",
+					"extname": "gm8_libsm64_mario_set_velocity",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_velocity(id, x, y, z): Set a Mario's current velocity",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_forward_velocity",
+					"extname": "gm8_libsm64_mario_set_forward_velocity",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_forward_velocity(id, vel): Set a Mario's current forward velocity",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_invincibility",
+					"extname": "gm8_libsm64_mario_set_invincibility",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_invincibility(id, timer): Set a Mario's current invincibility timer",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_water_level",
+					"extname": "gm8_libsm64_mario_set_water_level",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_water_level(id, level): Set a Mario's current water level",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_gas_level",
+					"extname": "gm8_libsm64_mario_set_gas_level",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_gas_level(id, level): Set a Mario's current gas level",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_health_hex",
+					"extname": "gm8_libsm64_mario_set_health_hex",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_health_hex(id, health): Set a Mario's current health (hex, advanced only)",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_set_health",
+					"extname": "gm8_libsm64_mario_set_health",
+					"calltype": 11,
+					"helpline": "libsm64_mario_set_health(id, health): Set a Mario's current health pieces",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_take_damage",
+					"extname": "gm8_libsm64_mario_take_damage",
+					"calltype": 11,
+					"helpline": "libsm64_mario_take_damage(id, damage, subtype, x, y, z): Make this Mario take damage",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_heal",
+					"extname": "gm8_libsm64_mario_heal",
+					"calltype": 11,
+					"helpline": "libsm64_mario_heal(id, healCounter): Add some health to this Mario",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_kill",
+					"extname": "gm8_libsm64_mario_kill",
+					"calltype": 11,
+					"helpline": "libsm64_mario_kill(id): Kill this Mario instantly",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_interact_cap",
+					"extname": "gm8_libsm64_mario_interact_cap",
+					"calltype": 11,
+					"helpline": "libsm64_mario_interact_cap(id, capFlag, capTime, playMusic): Give this Mario a cap (wing, metal etc...)",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_extend_cap",
+					"extname": "gm8_libsm64_mario_extend_cap",
+					"calltype": 11,
+					"helpline": "libsm64_mario_extend_cap(id, capTime): Extend the cap timer for this Mario",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_mario_attack",
+					"extname": "gm8_libsm64_mario_attack",
+					"calltype": 11,
+					"helpline": "libsm64_mario_attack(id, x, y, z, hitboxHeight): Checks if Mario is attacking the specified position, returns true if attacked",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_add_static_surface",
+					"extname": "gm8_libsm64_add_static_surface",
+					"calltype": 11,
+					"helpline": "libsm64_add_static_surface(surfaceType, force, terrainType, v00, v01, v02, v10, v11, v12, v20, v21, v22): Add a static surface that Mario can interact with",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_remove_static_surfaces",
+					"extname": "gm8_libsm64_remove_static_surfaces",
+					"calltype": 11,
+					"helpline": "libsm64_remove_static_surfaces(removeCount): Remove this many static surfaces. Use -1 to remove all",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_load_static_surfaces",
+					"extname": "gm8_libsm64_load_static_surface",
+					"calltype": 11,
+					"helpline": "libsm64_load_static_surfaces(): Apply changes to static surfaces to libsm64",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_play_sound",
+					"extname": "gm8_libsm64_play_sound",
+					"calltype": 11,
+					"helpline": "libsm64_play_sound(soundBits, x, y, z): Plays a sound in a specified position. See SOUND_ constants for possible values",
+					"hidden": false,
+					"argtypes": [
+						2,
+						2,
+						2,
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_play_sound_global",
+					"extname": "gm8_libsm64_play_sound_global",
+					"calltype": 11,
+					"helpline": "libsm64_play_sound_global(soundBits): Plays a sound. See SOUND_ constants for possible values",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
+					"name": "libsm64_set_sound_volume",
+					"extname": "gm8_libsm64_set_sound_volume",
+					"calltype": 11,
+					"helpline": "libsm64_set_sound_volume(vol): Change the SM64 sound volume. vol must be a number between 0 and 1",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				}
+			],
+			"constants": [
+				{
+					"name": "SURFACE_DEFAULT",
+					"value": "0",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_BURNING",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_0004",
+					"value": "4",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_HANGABLE",
+					"value": "5",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_SLOW",
+					"value": "9",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_DEATH_PLANE",
+					"value": "10",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_CLOSE_CAMERA",
+					"value": "11",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_WATER",
+					"value": "13",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_FLOWING_WATER",
+					"value": "14",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_INTANGIBLE",
+					"value": "18",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_VERY_SLIPPERY",
+					"value": "19",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_SLIPPERY",
+					"value": "20",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_NOT_SLIPPERY",
+					"value": "21",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_TTM_VINES",
+					"value": "22",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_MGR_MUSIC",
+					"value": "26",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_INSTANT_WARP_1B",
+					"value": "27",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_INSTANT_WARP_1C",
+					"value": "28",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_INSTANT_WARP_1D",
+					"value": "29",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_INSTANT_WARP_1E",
+					"value": "30",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_SHALLOW_QUICKSAND",
+					"value": "33",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_DEEP_QUICKSAND",
+					"value": "34",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_INSTANT_QUICKSAND",
+					"value": "35",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_DEEP_MOVING_QUICKSAND",
+					"value": "36",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_SHALLOW_MOVING_QUICKSAND",
+					"value": "37",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_QUICKSAND",
+					"value": "38",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_MOVING_QUICKSAND",
+					"value": "39",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_WALL_MISC",
+					"value": "40",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_NOISE_DEFAULT",
+					"value": "41",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_NOISE_SLIPPERY",
+					"value": "42",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_HORIZONTAL_WIND",
+					"value": "44",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_INSTANT_MOVING_QUICKSAND",
+					"value": "45",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_ICE",
+					"value": "46",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_LOOK_UP_WARP",
+					"value": "47",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_HARD",
+					"value": "48",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_WARP",
+					"value": "50",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_TIMER_START",
+					"value": "51",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_TIMER_END",
+					"value": "52",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_HARD_SLIPPERY",
+					"value": "53",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_HARD_VERY_SLIPPERY",
+					"value": "54",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_HARD_NOT_SLIPPERY",
+					"value": "55",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_VERTICAL_WIND",
+					"value": "56",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_BOSS_FIGHT_CAMERA",
+					"value": "101",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_CAMERA_FREE_ROAM",
+					"value": "102",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_THI3_WALLKICK",
+					"value": "104",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_CAMERA_8_DIR",
+					"value": "105",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_CAMERA_MIDDLE",
+					"value": "110",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_CAMERA_ROTATE_RIGHT",
+					"value": "111",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_CAMERA_ROTATE_LEFT",
+					"value": "112",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_CAMERA_BOUNDARY",
+					"value": "114",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_NOISE_VERY_SLIPPERY_73",
+					"value": "115",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_NOISE_VERY_SLIPPERY_74",
+					"value": "116",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_NOISE_VERY_SLIPPERY",
+					"value": "117",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_NO_CAM_COLLISION",
+					"value": "118",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_NO_CAM_COLLISION_77",
+					"value": "119",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_NO_CAM_COL_VERY_SLIPPERY",
+					"value": "120",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_NO_CAM_COL_SLIPPERY",
+					"value": "121",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_SWITCH",
+					"value": "122",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_VANISH_CAP_WALLS",
+					"value": "123",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_A6",
+					"value": "166",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_A7",
+					"value": "167",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_A8",
+					"value": "168",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_A9",
+					"value": "169",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_AA",
+					"value": "170",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_AB",
+					"value": "171",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_AC",
+					"value": "172",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_AD",
+					"value": "173",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_AE",
+					"value": "174",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_AF",
+					"value": "175",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_B0",
+					"value": "176",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_B1",
+					"value": "177",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_B2",
+					"value": "178",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_B3",
+					"value": "179",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_B4",
+					"value": "180",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_B5",
+					"value": "181",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_B6",
+					"value": "182",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_B7",
+					"value": "183",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_B8",
+					"value": "184",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_B9",
+					"value": "185",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_BA",
+					"value": "186",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_BB",
+					"value": "187",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_BC",
+					"value": "188",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_BD",
+					"value": "189",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_BE",
+					"value": "190",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_BF",
+					"value": "191",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_C0",
+					"value": "192",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_C1",
+					"value": "193",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_C2",
+					"value": "194",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_C3",
+					"value": "195",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_C4",
+					"value": "196",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_C5",
+					"value": "197",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_C6",
+					"value": "198",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_C7",
+					"value": "199",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_C8",
+					"value": "200",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_C9",
+					"value": "201",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_CA",
+					"value": "202",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_CB",
+					"value": "203",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_CC",
+					"value": "204",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_CD",
+					"value": "205",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_CE",
+					"value": "206",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_CF",
+					"value": "207",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_D0",
+					"value": "208",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_D1",
+					"value": "209",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WOBBLE_D2",
+					"value": "210",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_D3",
+					"value": "211",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_D4",
+					"value": "212",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_D5",
+					"value": "213",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_D6",
+					"value": "214",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_D7",
+					"value": "215",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_D8",
+					"value": "216",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_D9",
+					"value": "217",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_DA",
+					"value": "218",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_DB",
+					"value": "219",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_DC",
+					"value": "220",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_DD",
+					"value": "221",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_DE",
+					"value": "222",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_DF",
+					"value": "223",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_E0",
+					"value": "224",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_E1",
+					"value": "225",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_E2",
+					"value": "226",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_E3",
+					"value": "227",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_E4",
+					"value": "228",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_E5",
+					"value": "229",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_E6",
+					"value": "230",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_E7",
+					"value": "231",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_E8",
+					"value": "232",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_E9",
+					"value": "233",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_EA",
+					"value": "234",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_EB",
+					"value": "235",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_EC",
+					"value": "236",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_ED",
+					"value": "237",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_EE",
+					"value": "238",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_EF",
+					"value": "239",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_F0",
+					"value": "240",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_F1",
+					"value": "241",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_F2",
+					"value": "242",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_F3",
+					"value": "243",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_TTC_PAINTING_1",
+					"value": "244",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_TTC_PAINTING_2",
+					"value": "245",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_TTC_PAINTING_3",
+					"value": "246",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_F7",
+					"value": "247",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_F8",
+					"value": "248",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_F9",
+					"value": "249",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_FA",
+					"value": "250",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_FB",
+					"value": "251",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_PAINTING_WARP_FC",
+					"value": "252",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_WOBBLING_WARP",
+					"value": "253",
+					"hidden": false
+				},
+				{
+					"name": "SURFACE_TRAPDOOR",
+					"value": "255",
+					"hidden": false
+				},
+				{
+					"name": "TERRAIN_GRASS",
+					"value": "0",
+					"hidden": false
+				},
+				{
+					"name": "TERRAIN_STONE",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "TERRAIN_SNOW",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "TERRAIN_SAND",
+					"value": "3",
+					"hidden": false
+				},
+				{
+					"name": "TERRAIN_SPOOKY",
+					"value": "4",
+					"hidden": false
+				},
+				{
+					"name": "TERRAIN_WATER",
+					"value": "5",
+					"hidden": false
+				},
+				{
+					"name": "TERRAIN_SLIDE",
+					"value": "6",
+					"hidden": false
+				},
+				{
+					"name": "TERRAIN_MASK",
+					"value": "7",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_SOUND_PLAYER",
+					"value": "0",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_CUTSCENE_COLLECT_STAR",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_MENU_TITLE_SCREEN",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_GRASS",
+					"value": "3",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_INSIDE_CASTLE",
+					"value": "4",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_WATER",
+					"value": "5",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_HOT",
+					"value": "6",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_BOSS_KOOPA",
+					"value": "7",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_SNOW",
+					"value": "8",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_SLIDE",
+					"value": "9",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_SPOOKY",
+					"value": "10",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_PIRANHA_PLANT",
+					"value": "11",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_UNDERGROUND",
+					"value": "12",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_MENU_STAR_SELECT",
+					"value": "13",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_POWERUP",
+					"value": "14",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_METAL_CAP",
+					"value": "15",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_KOOPA_MESSAGE",
+					"value": "16",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_KOOPA_ROAD",
+					"value": "17",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_HIGH_SCORE",
+					"value": "18",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_MERRY_GO_ROUND",
+					"value": "19",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_RACE",
+					"value": "20",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_CUTSCENE_STAR_SPAWN",
+					"value": "21",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_BOSS",
+					"value": "22",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_CUTSCENE_COLLECT_KEY",
+					"value": "23",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_ENDLESS_STAIRS",
+					"value": "24",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_LEVEL_BOSS_KOOPA_FINAL",
+					"value": "25",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_CUTSCENE_CREDITS",
+					"value": "26",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_SOLVE_PUZZLE",
+					"value": "27",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_TOAD_MESSAGE",
+					"value": "28",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_PEACH_MESSAGE",
+					"value": "29",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_CUTSCENE_INTRO",
+					"value": "30",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_CUTSCENE_VICTORY",
+					"value": "31",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_CUTSCENE_ENDING",
+					"value": "32",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_MENU_FILE_SELECT",
+					"value": "33",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_EVENT_CUTSCENE_LAKITU",
+					"value": "34",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_COUNT",
+					"value": "35",
+					"hidden": false
+				},
+				{
+					"name": "SEQ_VARIATION",
+					"value": "128",
+					"hidden": false
+				},
+				{
+					"name": "LAYER_FORCE",
+					"value": "0",
+					"hidden": false
+				},
+				{
+					"name": "LAYER_OPAQUE",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "LAYER_OPAQUE_DECAL",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "LAYER_OPAQUE_INTER",
+					"value": "3",
+					"hidden": false
+				},
+				{
+					"name": "LAYER_ALPHA",
+					"value": "4",
+					"hidden": false
+				},
+				{
+					"name": "LAYER_TRANSPARENT",
+					"value": "5",
+					"hidden": false
+				},
+				{
+					"name": "LAYER_TRANSPARENT_DECAL",
+					"value": "6",
+					"hidden": false
+				},
+				{
+					"name": "LAYER_TRANSPARENT_INTER",
+					"value": "7",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_NONZERO_ANALOG",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_A_PRESSED",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_OFF_FLOOR",
+					"value": "4",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_ABOVE_SLIDE",
+					"value": "8",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_FIRST_PERSON",
+					"value": "16",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_UNKNOWN_5",
+					"value": "32",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_SQUISHED",
+					"value": "64",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_A_DOWN",
+					"value": "128",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_IN_POISON_GAS",
+					"value": "256",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_IN_WATER",
+					"value": "512",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_UNKNOWN_10",
+					"value": "1024",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_INTERACT_OBJ_GRABBABLE",
+					"value": "2048",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_UNKNOWN_12",
+					"value": "4096",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_B_PRESSED",
+					"value": "8192",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_Z_DOWN",
+					"value": "16384",
+					"hidden": false
+				},
+				{
+					"name": "INPUT_Z_PRESSED",
+					"value": "32768",
+					"hidden": false
+				},
+				{
+					"name": "GROUND_STEP_LEFT_GROUND",
+					"value": "0",
+					"hidden": false
+				},
+				{
+					"name": "GROUND_STEP_NONE",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "GROUND_STEP_HIT_WALL",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "GROUND_STEP_HIT_WALL_STOP_QSTEPS",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "GROUND_STEP_HIT_WALL_CONTINUE_QSTEPS",
+					"value": "3",
+					"hidden": false
+				},
+				{
+					"name": "AIR_STEP_CHECK_LEDGE_GRAB",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "AIR_STEP_CHECK_HANG",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "AIR_STEP_NONE",
+					"value": "0",
+					"hidden": false
+				},
+				{
+					"name": "AIR_STEP_LANDED",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "AIR_STEP_HIT_WALL",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "AIR_STEP_GRABBED_LEDGE",
+					"value": "3",
+					"hidden": false
+				},
+				{
+					"name": "AIR_STEP_GRABBED_CEILING",
+					"value": "4",
+					"hidden": false
+				},
+				{
+					"name": "AIR_STEP_HIT_LAVA_WALL",
+					"value": "6",
+					"hidden": false
+				},
+				{
+					"name": "WATER_STEP_NONE",
+					"value": "0",
+					"hidden": false
+				},
+				{
+					"name": "WATER_STEP_HIT_FLOOR",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "WATER_STEP_HIT_CEILING",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "WATER_STEP_CANCELLED",
+					"value": "3",
+					"hidden": false
+				},
+				{
+					"name": "WATER_STEP_HIT_WALL",
+					"value": "4",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_DUST",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_VERTICAL_STAR",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_2",
+					"value": "4",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_SPARKLES",
+					"value": "8",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_HORIZONTAL_STAR",
+					"value": "16",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_BUBBLE",
+					"value": "32",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_WATER_SPLASH",
+					"value": "64",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_IDLE_WATER_WAVE",
+					"value": "128",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_SHALLOW_WATER_WAVE",
+					"value": "256",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_PLUNGE_BUBBLE",
+					"value": "512",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_WAVE_TRAIL",
+					"value": "1024",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_FIRE",
+					"value": "2048",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_SHALLOW_WATER_SPLASH",
+					"value": "4096",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_LEAF",
+					"value": "8192",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_SNOW",
+					"value": "16384",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_DIRT",
+					"value": "32768",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_MIST_CIRCLE",
+					"value": "65536",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_BREATH",
+					"value": "131072",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_TRIANGLE",
+					"value": "262144",
+					"hidden": false
+				},
+				{
+					"name": "PARTICLE_19",
+					"value": "524288",
+					"hidden": false
+				},
+				{
+					"name": "MODEL_STATE_NOISE_ALPHA",
+					"value": "384",
+					"hidden": false
+				},
+				{
+					"name": "MODEL_STATE_METAL",
+					"value": "512",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_NORMAL_CAP",
+					"value": "1",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_VANISH_CAP",
+					"value": "2",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_METAL_CAP",
+					"value": "4",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_WING_CAP",
+					"value": "8",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_CAP_ON_HEAD",
+					"value": "16",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_CAP_IN_HAND",
+					"value": "32",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_METAL_SHOCK",
+					"value": "64",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_TELEPORTING",
+					"value": "128",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_UNKNOWN_08",
+					"value": "256",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_UNKNOWN_13",
+					"value": "8192",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_ACTION_SOUND_PLAYED",
+					"value": "65536",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_MARIO_SOUND_PLAYED",
+					"value": "131072",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_UNKNOWN_18",
+					"value": "262144",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_PUNCHING",
+					"value": "1048576",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_KICKING",
+					"value": "2097152",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_TRIPPING",
+					"value": "4194304",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_UNKNOWN_25",
+					"value": "33554432",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_UNKNOWN_30",
+					"value": "1073741824",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_UNKNOWN_31",
+					"value": "2147483648",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_SPECIAL_CAPS",
+					"value": "14",
+					"hidden": false
+				},
+				{
+					"name": "MARIO_CAPS",
+					"value": "15",
+					"hidden": false
+				},
+				{
+					"name": "ACT_ID_MASK",
+					"value": "511",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUP_MASK",
+					"value": "448",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUP_STATIONARY",
+					"value": "0",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUP_MOVING",
+					"value": "64",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUP_AIRBORNE",
+					"value": "128",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUP_SUBMERGED",
+					"value": "192",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUP_CUTSCENE",
+					"value": "256",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUP_AUTOMATIC",
+					"value": "320",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUP_OBJECT",
+					"value": "384",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_STATIONARY",
+					"value": "512",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_MOVING",
+					"value": "1024",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_AIR",
+					"value": "2048",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_INTANGIBLE",
+					"value": "4096",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_SWIMMING",
+					"value": "8192",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_METAL_WATER",
+					"value": "16384",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_SHORT_HITBOX",
+					"value": "32768",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_RIDING_SHELL",
+					"value": "65536",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_INVULNERABLE",
+					"value": "131072",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_BUTT_OR_STOMACH_SLIDE",
+					"value": "262144",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_DIVING",
+					"value": "524288",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_ON_POLE",
+					"value": "1048576",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_HANGING",
+					"value": "2097152",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_IDLE",
+					"value": "4194304",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_ATTACKING",
+					"value": "8388608",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION",
+					"value": "16777216",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_CONTROL_JUMP_HEIGHT",
+					"value": "33554432",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_ALLOW_FIRST_PERSON",
+					"value": "67108864",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_PAUSE_EXIT",
+					"value": "134217728",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_SWIMMING_OR_FLYING",
+					"value": "268435456",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_WATER_OR_TEXT",
+					"value": "536870912",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLAG_THROWING",
+					"value": "2147483648",
+					"hidden": false
+				},
+				{
+					"name": "ACT_UNINITIALIZED",
+					"value": "0",
+					"hidden": false
+				},
+				{
+					"name": "ACT_IDLE",
+					"value": "205521409",
+					"hidden": false
+				},
+				{
+					"name": "ACT_START_SLEEPING",
+					"value": "205521410",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SLEEPING",
+					"value": "201327107",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WAKING_UP",
+					"value": "201327108",
+					"hidden": false
+				},
+				{
+					"name": "ACT_PANTING",
+					"value": "205521413",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_PANTING_UNUSED",
+					"value": "134218246",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_IDLE",
+					"value": "134218247",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_HEAVY_IDLE",
+					"value": "134218248",
+					"hidden": false
+				},
+				{
+					"name": "ACT_STANDING_AGAINST_WALL",
+					"value": "205521417",
+					"hidden": false
+				},
+				{
+					"name": "ACT_COUGHING",
+					"value": "205521418",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SHIVERING",
+					"value": "205521419",
+					"hidden": false
+				},
+				{
+					"name": "ACT_IN_QUICKSAND",
+					"value": "131597",
+					"hidden": false
+				},
+				{
+					"name": "ACT_UNKNOWN_0002020E",
+					"value": "131598",
+					"hidden": false
+				},
+				{
+					"name": "ACT_CROUCHING",
+					"value": "201359904",
+					"hidden": false
+				},
+				{
+					"name": "ACT_START_CROUCHING",
+					"value": "201359905",
+					"hidden": false
+				},
+				{
+					"name": "ACT_STOP_CROUCHING",
+					"value": "201359906",
+					"hidden": false
+				},
+				{
+					"name": "ACT_START_CRAWLING",
+					"value": "201359907",
+					"hidden": false
+				},
+				{
+					"name": "ACT_STOP_CRAWLING",
+					"value": "201359908",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SLIDE_KICK_SLIDE_STOP",
+					"value": "134218277",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SHOCKWAVE_BOUNCE",
+					"value": "131622",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FIRST_PERSON",
+					"value": "201327143",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BACKFLIP_LAND_STOP",
+					"value": "134218287",
+					"hidden": false
+				},
+				{
+					"name": "ACT_JUMP_LAND_STOP",
+					"value": "201327152",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DOUBLE_JUMP_LAND_STOP",
+					"value": "201327153",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FREEFALL_LAND_STOP",
+					"value": "201327154",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SIDE_FLIP_LAND_STOP",
+					"value": "201327155",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_JUMP_LAND_STOP",
+					"value": "134218292",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_FREEFALL_LAND_STOP",
+					"value": "134218293",
+					"hidden": false
+				},
+				{
+					"name": "ACT_AIR_THROW_LAND",
+					"value": "2147486262",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TWIRL_LAND",
+					"value": "411042360",
+					"hidden": false
+				},
+				{
+					"name": "ACT_LAVA_BOOST_LAND",
+					"value": "134218297",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TRIPLE_JUMP_LAND_STOP",
+					"value": "134218298",
+					"hidden": false
+				},
+				{
+					"name": "ACT_LONG_JUMP_LAND_STOP",
+					"value": "134218299",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUND_POUND_LAND",
+					"value": "8389180",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BRAKING_STOP",
+					"value": "201327165",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BUTT_SLIDE_STOP",
+					"value": "201327166",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_BUTT_SLIDE_STOP",
+					"value": "134218815",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WALKING",
+					"value": "67109952",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_WALKING",
+					"value": "1090",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TURNING_AROUND",
+					"value": "1091",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FINISH_TURNING_AROUND",
+					"value": "1092",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BRAKING",
+					"value": "67109957",
+					"hidden": false
+				},
+				{
+					"name": "ACT_RIDING_SHELL_GROUND",
+					"value": "545326150",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_HEAVY_WALKING",
+					"value": "1095",
+					"hidden": false
+				},
+				{
+					"name": "ACT_CRAWLING",
+					"value": "67142728",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BURNING_GROUND",
+					"value": "132169",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DECELERATING",
+					"value": "67109962",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_DECELERATING",
+					"value": "1099",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BEGIN_SLIDING",
+					"value": "80",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_BEGIN_SLIDING",
+					"value": "81",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BUTT_SLIDE",
+					"value": "8651858",
+					"hidden": false
+				},
+				{
+					"name": "ACT_STOMACH_SLIDE",
+					"value": "9176147",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_BUTT_SLIDE",
+					"value": "8651860",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_STOMACH_SLIDE",
+					"value": "9176149",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DIVE_SLIDE",
+					"value": "8914006",
+					"hidden": false
+				},
+				{
+					"name": "ACT_MOVE_PUNCHING",
+					"value": "8389719",
+					"hidden": false
+				},
+				{
+					"name": "ACT_CROUCH_SLIDE",
+					"value": "75531353",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SLIDE_KICK_SLIDE",
+					"value": "8389722",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HARD_BACKWARD_GROUND_KB",
+					"value": "132192",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HARD_FORWARD_GROUND_KB",
+					"value": "132193",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BACKWARD_GROUND_KB",
+					"value": "132194",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FORWARD_GROUND_KB",
+					"value": "132195",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SOFT_BACKWARD_GROUND_KB",
+					"value": "132196",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SOFT_FORWARD_GROUND_KB",
+					"value": "132197",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUND_BONK",
+					"value": "132198",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DEATH_EXIT_LAND",
+					"value": "132199",
+					"hidden": false
+				},
+				{
+					"name": "ACT_JUMP_LAND",
+					"value": "67110000",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FREEFALL_LAND",
+					"value": "67110001",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DOUBLE_JUMP_LAND",
+					"value": "67110002",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SIDE_FLIP_LAND",
+					"value": "67110003",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_JUMP_LAND",
+					"value": "1140",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_FREEFALL_LAND",
+					"value": "1141",
+					"hidden": false
+				},
+				{
+					"name": "ACT_QUICKSAND_JUMP_LAND",
+					"value": "1142",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_QUICKSAND_JUMP_LAND",
+					"value": "1143",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TRIPLE_JUMP_LAND",
+					"value": "67110008",
+					"hidden": false
+				},
+				{
+					"name": "ACT_LONG_JUMP_LAND",
+					"value": "1145",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BACKFLIP_LAND",
+					"value": "67110010",
+					"hidden": false
+				},
+				{
+					"name": "ACT_JUMP",
+					"value": "50333824",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DOUBLE_JUMP",
+					"value": "50333825",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TRIPLE_JUMP",
+					"value": "16779394",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BACKFLIP",
+					"value": "16779395",
+					"hidden": false
+				},
+				{
+					"name": "ACT_STEEP_JUMP",
+					"value": "50333829",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WALL_KICK_AIR",
+					"value": "50333830",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SIDE_FLIP",
+					"value": "16779399",
+					"hidden": false
+				},
+				{
+					"name": "ACT_LONG_JUMP",
+					"value": "50333832",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WATER_JUMP",
+					"value": "16779401",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DIVE",
+					"value": "25692298",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FREEFALL",
+					"value": "16779404",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TOP_OF_POLE_JUMP",
+					"value": "50333837",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BUTT_SLIDE_AIR",
+					"value": "50333838",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLYING_TRIPLE_JUMP",
+					"value": "50333844",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SHOT_FROM_CANNON",
+					"value": "8915096",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLYING",
+					"value": "277350553",
+					"hidden": false
+				},
+				{
+					"name": "ACT_RIDING_SHELL_JUMP",
+					"value": "42010778",
+					"hidden": false
+				},
+				{
+					"name": "ACT_RIDING_SHELL_FALL",
+					"value": "8456347",
+					"hidden": false
+				},
+				{
+					"name": "ACT_VERTICAL_WIND",
+					"value": "268961948",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_JUMP",
+					"value": "50333856",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_FREEFALL",
+					"value": "16779425",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_BUTT_SLIDE_AIR",
+					"value": "16779426",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_WATER_JUMP",
+					"value": "16779427",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TWIRLING",
+					"value": "276826276",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FORWARD_ROLLOUT",
+					"value": "16779430",
+					"hidden": false
+				},
+				{
+					"name": "ACT_AIR_HIT_WALL",
+					"value": "2215",
+					"hidden": false
+				},
+				{
+					"name": "ACT_RIDING_HOOT",
+					"value": "1192",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GROUND_POUND",
+					"value": "8390825",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SLIDE_KICK",
+					"value": "25168042",
+					"hidden": false
+				},
+				{
+					"name": "ACT_AIR_THROW",
+					"value": "2197817515",
+					"hidden": false
+				},
+				{
+					"name": "ACT_JUMP_KICK",
+					"value": "25168044",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BACKWARD_ROLLOUT",
+					"value": "16779437",
+					"hidden": false
+				},
+				{
+					"name": "ACT_CRAZY_BOX_BOUNCE",
+					"value": "2222",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SPECIAL_TRIPLE_JUMP",
+					"value": "50333871",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BACKWARD_AIR_KB",
+					"value": "16910512",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FORWARD_AIR_KB",
+					"value": "16910513",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HARD_FORWARD_AIR_KB",
+					"value": "16910514",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HARD_BACKWARD_AIR_KB",
+					"value": "16910515",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BURNING_JUMP",
+					"value": "16910516",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BURNING_FALL",
+					"value": "16910517",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SOFT_BONK",
+					"value": "16910518",
+					"hidden": false
+				},
+				{
+					"name": "ACT_LAVA_BOOST",
+					"value": "16910519",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GETTING_BLOWN",
+					"value": "16910520",
+					"hidden": false
+				},
+				{
+					"name": "ACT_THROWN_FORWARD",
+					"value": "16910525",
+					"hidden": false
+				},
+				{
+					"name": "ACT_THROWN_BACKWARD",
+					"value": "16910526",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WATER_IDLE",
+					"value": "939532992",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_WATER_IDLE",
+					"value": "939532993",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WATER_ACTION_END",
+					"value": "805315266",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_WATER_ACTION_END",
+					"value": "805315267",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DROWNING",
+					"value": "805319364",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BACKWARD_WATER_KB",
+					"value": "805446341",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FORWARD_WATER_KB",
+					"value": "805446342",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WATER_DEATH",
+					"value": "805319367",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WATER_SHOCKED",
+					"value": "805446344",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BREASTSTROKE",
+					"value": "805315792",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SWIMMING_END",
+					"value": "805315793",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FLUTTER_KICK",
+					"value": "805315794",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_BREASTSTROKE",
+					"value": "805315795",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_SWIMMING_END",
+					"value": "805315796",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_FLUTTER_KICK",
+					"value": "805315797",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WATER_SHELL_SWIMMING",
+					"value": "805315798",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WATER_THROW",
+					"value": "805315808",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WATER_PUNCH",
+					"value": "805315809",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WATER_PLUNGE",
+					"value": "805315298",
+					"hidden": false
+				},
+				{
+					"name": "ACT_CAUGHT_IN_WHIRLPOOL",
+					"value": "805446371",
+					"hidden": false
+				},
+				{
+					"name": "ACT_METAL_WATER_STANDING",
+					"value": "134234864",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_METAL_WATER_STANDING",
+					"value": "134234865",
+					"hidden": false
+				},
+				{
+					"name": "ACT_METAL_WATER_WALKING",
+					"value": "17650",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_METAL_WATER_WALKING",
+					"value": "17651",
+					"hidden": false
+				},
+				{
+					"name": "ACT_METAL_WATER_FALLING",
+					"value": "17140",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_METAL_WATER_FALLING",
+					"value": "17141",
+					"hidden": false
+				},
+				{
+					"name": "ACT_METAL_WATER_FALL_LAND",
+					"value": "17142",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_METAL_WATER_FALL_LAND",
+					"value": "17143",
+					"hidden": false
+				},
+				{
+					"name": "ACT_METAL_WATER_JUMP",
+					"value": "17656",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_METAL_WATER_JUMP",
+					"value": "17657",
+					"hidden": false
+				},
+				{
+					"name": "ACT_METAL_WATER_JUMP_LAND",
+					"value": "17658",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLD_METAL_WATER_JUMP_LAND",
+					"value": "17659",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DISAPPEARED",
+					"value": "4864",
+					"hidden": false
+				},
+				{
+					"name": "ACT_INTRO_CUTSCENE",
+					"value": "67113729",
+					"hidden": false
+				},
+				{
+					"name": "ACT_STAR_DANCE_EXIT",
+					"value": "4866",
+					"hidden": false
+				},
+				{
+					"name": "ACT_STAR_DANCE_WATER",
+					"value": "4867",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FALL_AFTER_STAR_GRAB",
+					"value": "6404",
+					"hidden": false
+				},
+				{
+					"name": "ACT_READING_AUTOMATIC_DIALOG",
+					"value": "536875781",
+					"hidden": false
+				},
+				{
+					"name": "ACT_READING_NPC_DIALOG",
+					"value": "536875782",
+					"hidden": false
+				},
+				{
+					"name": "ACT_STAR_DANCE_NO_EXIT",
+					"value": "4871",
+					"hidden": false
+				},
+				{
+					"name": "ACT_READING_SIGN",
+					"value": "4872",
+					"hidden": false
+				},
+				{
+					"name": "ACT_JUMBO_STAR_CUTSCENE",
+					"value": "6409",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WAITING_FOR_DIALOG",
+					"value": "4874",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DEBUG_FREE_MOVE",
+					"value": "4879",
+					"hidden": false
+				},
+				{
+					"name": "ACT_STANDING_DEATH",
+					"value": "135953",
+					"hidden": false
+				},
+				{
+					"name": "ACT_QUICKSAND_DEATH",
+					"value": "135954",
+					"hidden": false
+				},
+				{
+					"name": "ACT_ELECTROCUTION",
+					"value": "135955",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SUFFOCATION",
+					"value": "135956",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DEATH_ON_STOMACH",
+					"value": "135957",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DEATH_ON_BACK",
+					"value": "135958",
+					"hidden": false
+				},
+				{
+					"name": "ACT_EATEN_BY_BUBBA",
+					"value": "135959",
+					"hidden": false
+				},
+				{
+					"name": "ACT_END_PEACH_CUTSCENE",
+					"value": "6424",
+					"hidden": false
+				},
+				{
+					"name": "ACT_CREDITS_CUTSCENE",
+					"value": "4889",
+					"hidden": false
+				},
+				{
+					"name": "ACT_END_WAVING_CUTSCENE",
+					"value": "4890",
+					"hidden": false
+				},
+				{
+					"name": "ACT_PULLING_DOOR",
+					"value": "4896",
+					"hidden": false
+				},
+				{
+					"name": "ACT_PUSHING_DOOR",
+					"value": "4897",
+					"hidden": false
+				},
+				{
+					"name": "ACT_WARP_DOOR_SPAWN",
+					"value": "4898",
+					"hidden": false
+				},
+				{
+					"name": "ACT_EMERGE_FROM_PIPE",
+					"value": "6435",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SPAWN_SPIN_AIRBORNE",
+					"value": "6436",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SPAWN_SPIN_LANDING",
+					"value": "4901",
+					"hidden": false
+				},
+				{
+					"name": "ACT_EXIT_AIRBORNE",
+					"value": "6438",
+					"hidden": false
+				},
+				{
+					"name": "ACT_EXIT_LAND_SAVE_DIALOG",
+					"value": "4903",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DEATH_EXIT",
+					"value": "6440",
+					"hidden": false
+				},
+				{
+					"name": "ACT_UNUSED_DEATH_EXIT",
+					"value": "6441",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FALLING_DEATH_EXIT",
+					"value": "6442",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SPECIAL_EXIT_AIRBORNE",
+					"value": "6443",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SPECIAL_DEATH_EXIT",
+					"value": "6444",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FALLING_EXIT_AIRBORNE",
+					"value": "6445",
+					"hidden": false
+				},
+				{
+					"name": "ACT_UNLOCKING_KEY_DOOR",
+					"value": "4910",
+					"hidden": false
+				},
+				{
+					"name": "ACT_UNLOCKING_STAR_DOOR",
+					"value": "4911",
+					"hidden": false
+				},
+				{
+					"name": "ACT_ENTERING_STAR_DOOR",
+					"value": "4913",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SPAWN_NO_SPIN_AIRBORNE",
+					"value": "6450",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SPAWN_NO_SPIN_LANDING",
+					"value": "4915",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BBH_ENTER_JUMP",
+					"value": "6452",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BBH_ENTER_SPIN",
+					"value": "5429",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TELEPORT_FADE_OUT",
+					"value": "4918",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TELEPORT_FADE_IN",
+					"value": "4919",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SHOCKED",
+					"value": "131896",
+					"hidden": false
+				},
+				{
+					"name": "ACT_SQUISHED",
+					"value": "131897",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HEAD_STUCK_IN_GROUND",
+					"value": "131898",
+					"hidden": false
+				},
+				{
+					"name": "ACT_BUTT_STUCK_IN_GROUND",
+					"value": "131899",
+					"hidden": false
+				},
+				{
+					"name": "ACT_FEET_STUCK_IN_GROUND",
+					"value": "131900",
+					"hidden": false
+				},
+				{
+					"name": "ACT_PUTTING_ON_CAP",
+					"value": "4925",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLDING_POLE",
+					"value": "135267136",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GRAB_POLE_SLOW",
+					"value": "1049409",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GRAB_POLE_FAST",
+					"value": "1049410",
+					"hidden": false
+				},
+				{
+					"name": "ACT_CLIMBING_POLE",
+					"value": "1049411",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TOP_OF_POLE_TRANSITION",
+					"value": "1049412",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TOP_OF_POLE",
+					"value": "1049413",
+					"hidden": false
+				},
+				{
+					"name": "ACT_START_HANGING",
+					"value": "136315720",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HANGING",
+					"value": "2097993",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HANG_MOVING",
+					"value": "2098506",
+					"hidden": false
+				},
+				{
+					"name": "ACT_LEDGE_GRAB",
+					"value": "134218571",
+					"hidden": false
+				},
+				{
+					"name": "ACT_LEDGE_CLIMB_SLOW_1",
+					"value": "1356",
+					"hidden": false
+				},
+				{
+					"name": "ACT_LEDGE_CLIMB_SLOW_2",
+					"value": "1357",
+					"hidden": false
+				},
+				{
+					"name": "ACT_LEDGE_CLIMB_DOWN",
+					"value": "1358",
+					"hidden": false
+				},
+				{
+					"name": "ACT_LEDGE_CLIMB_FAST",
+					"value": "1359",
+					"hidden": false
+				},
+				{
+					"name": "ACT_GRABBED",
+					"value": "131952",
+					"hidden": false
+				},
+				{
+					"name": "ACT_IN_CANNON",
+					"value": "4977",
+					"hidden": false
+				},
+				{
+					"name": "ACT_TORNADO_TWIRLING",
+					"value": "268567410",
+					"hidden": false
+				},
+				{
+					"name": "ACT_PUNCHING",
+					"value": "8389504",
+					"hidden": false
+				},
+				{
+					"name": "ACT_PICKING_UP",
+					"value": "899",
+					"hidden": false
+				},
+				{
+					"name": "ACT_DIVE_PICKING_UP",
+					"value": "901",
+					"hidden": false
+				},
+				{
+					"name": "ACT_STOMACH_SLIDE_STOP",
+					"value": "902",
+					"hidden": false
+				},
+				{
+					"name": "ACT_PLACING_DOWN",
+					"value": "903",
+					"hidden": false
+				},
+				{
+					"name": "ACT_THROWING",
+					"value": "2147485064",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HEAVY_THROW",
+					"value": "2147485065",
+					"hidden": false
+				},
+				{
+					"name": "ACT_PICKING_UP_BOWSER",
+					"value": "912",
+					"hidden": false
+				},
+				{
+					"name": "ACT_HOLDING_BOWSER",
+					"value": "913",
+					"hidden": false
+				},
+				{
+					"name": "ACT_RELEASING_BOWSER",
+					"value": "914",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_TERRAIN_JUMP",
+					"value": "67141761",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_TERRAIN_LANDING",
+					"value": "67666049",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_TERRAIN_STEP",
+					"value": "101744769",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_TERRAIN_BODY_HIT_GROUND",
+					"value": "68714625",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_TERRAIN_STEP_TIPTOE",
+					"value": "102793345",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_TERRAIN_STUCK_IN_GROUND",
+					"value": "71860353",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_TERRAIN_HEAVY_LANDING",
+					"value": "73433217",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_METAL_JUMP",
+					"value": "69767297",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_METAL_LANDING",
+					"value": "69832833",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_METAL_STEP",
+					"value": "69898369",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_METAL_HEAVY_LANDING",
+					"value": "69963905",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_CLAP_HANDS_COLD",
+					"value": "103547009",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_HANGING_STEP",
+					"value": "70099073",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_QUICKSAND_STEP",
+					"value": "70123649",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_METAL_STEP_TIPTOE",
+					"value": "70226049",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNKNOWN430",
+					"value": "70303873",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNKNOWN431",
+					"value": "70344833",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNKNOWN432",
+					"value": "70418561",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_SWIM",
+					"value": "70484097",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNKNOWN434",
+					"value": "70549633",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_THROW",
+					"value": "70615169",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_KEY_SWISH",
+					"value": "70680705",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_SPIN",
+					"value": "70746241",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_TWIRL",
+					"value": "70811777",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_CLIMB_UP_TREE",
+					"value": "70942849",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_CLIMB_DOWN_TREE",
+					"value": "59",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNK3C",
+					"value": "60",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNKNOWN43D",
+					"value": "71139457",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNKNOWN43E",
+					"value": "71204993",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_PAT_BACK",
+					"value": "71270529",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_BRUSH_HAIR",
+					"value": "71336065",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_CLIMB_UP_POLE",
+					"value": "71401601",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_METAL_BONK",
+					"value": "71467137",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNSTUCK_FROM_GROUND",
+					"value": "71532673",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_HIT",
+					"value": "71614593",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_HIT_2",
+					"value": "71610497",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_HIT_3",
+					"value": "71606401",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_BONK",
+					"value": "71671937",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_SHRINK_INTO_BBH",
+					"value": "71737473",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_SWIM_FAST",
+					"value": "71803009",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_METAL_JUMP_WATER",
+					"value": "72388737",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_METAL_LAND_WATER",
+					"value": "72454273",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_METAL_STEP_WATER",
+					"value": "72519809",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNK53",
+					"value": "83",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNK54",
+					"value": "84",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNK55",
+					"value": "85",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_FLYING_FAST",
+					"value": "72777857",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_TELEPORT",
+					"value": "72859777",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNKNOWN458",
+					"value": "72917121",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_BOUNCE_OFF_OBJECT",
+					"value": "72986753",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_SIDE_FLIP_UNK",
+					"value": "73040001",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_READ_SIGN",
+					"value": "73138049",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNKNOWN45C",
+					"value": "73171073",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_UNK5D",
+					"value": "93",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_INTRO_UNK45E",
+					"value": "73302145",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ACTION_INTRO_UNK45F",
+					"value": "73367681",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_TERRAIN_SLIDE",
+					"value": "335544321",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_TERRAIN_RIDING_SHELL",
+					"value": "337641473",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_LAVA_BURN",
+					"value": "336592897",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_SLIDE_DOWN_POLE",
+					"value": "336658433",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_SLIDE_DOWN_TREE",
+					"value": "336756737",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_QUICKSAND_DEATH",
+					"value": "336855041",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_SHOCKED",
+					"value": "336986113",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_FLYING",
+					"value": "337051649",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_ALMOST_DROWNING",
+					"value": "471334913",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_AIM_CANNON",
+					"value": "488185857",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_UNK1A",
+					"value": "4122",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MOVING_RIDING_SHELL_LAVA",
+					"value": "338165761",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_YAH_WAH_HOO",
+					"value": "604012673",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_YAH",
+					"value": "604012673",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_WAH",
+					"value": "604078209",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_HOO",
+					"value": "604143745",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_HOOHOO",
+					"value": "604209281",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_YAHOO",
+					"value": "604274817",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_UH",
+					"value": "604340353",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_HRMM",
+					"value": "604405889",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_WAH2",
+					"value": "604471425",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_WHOA",
+					"value": "604553345",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_EEUH",
+					"value": "604602497",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_ATTACKED",
+					"value": "604700545",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_OOOF",
+					"value": "604733569",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_OOOF2",
+					"value": "604754049",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_HERE_WE_GO",
+					"value": "604799105",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_YAWNING",
+					"value": "604864641",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_SNORING1",
+					"value": "604930177",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_SNORING2",
+					"value": "604995713",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_WAAAOOOW",
+					"value": "605077633",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_HAHA",
+					"value": "605126785",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_HAHA_2",
+					"value": "605155457",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_UH2",
+					"value": "605278337",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_UH2_2",
+					"value": "605257857",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_ON_FIRE",
+					"value": "605331585",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_DYING",
+					"value": "605421441",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_PANTING_COLD",
+					"value": "605454465",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_PANTING",
+					"value": "605585537",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_COUGHING1",
+					"value": "605782145",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_COUGHING2",
+					"value": "605847681",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_COUGHING3",
+					"value": "605913217",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_PUNCH_YAH",
+					"value": "605978753",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_PUNCH_HOO",
+					"value": "606044289",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_MAMA_MIA",
+					"value": "606109825",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_OKEY_DOKEY",
+					"value": "8225",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_GROUND_POUND_WAH",
+					"value": "606240897",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_DROWNING",
+					"value": "606335105",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_PUNCH_WAH",
+					"value": "606371969",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_PEACH_DEAR_MARIO",
+					"value": "606666625",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_YAHOO_WAHA_YIPPEE",
+					"value": "606830721",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_DOH",
+					"value": "607158401",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_GAME_OVER",
+					"value": "607256449",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_HELLO",
+					"value": "607321985",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_PRESS_START_TO_PLAY",
+					"value": "607387553",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_TWIRL_BOUNCE",
+					"value": "607420545",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_SNORING3",
+					"value": "607518593",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_SO_LONGA_BOWSER",
+					"value": "607551617",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MARIO_IMA_TIRED",
+					"value": "607617153",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_PEACH_MARIO",
+					"value": "607715201",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_PEACH_POWER_OF_THE_STARS",
+					"value": "607780737",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_PEACH_THANKS_TO_YOU",
+					"value": "607846273",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_PEACH_THANK_YOU_MARIO",
+					"value": "607911809",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_PEACH_SOMETHING_SPECIAL",
+					"value": "607977345",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_PEACH_BAKE_A_CAKE",
+					"value": "608042881",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_PEACH_FOR_MARIO",
+					"value": "608108417",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_PEACH_MARIO2",
+					"value": "608173953",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_ACTIVATE_CAP_SWITCH",
+					"value": "805339265",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_FLAME_OUT",
+					"value": "805535873",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_OPEN_WOOD_DOOR",
+					"value": "805617793",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_CLOSE_WOOD_DOOR",
+					"value": "805683329",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_OPEN_IRON_DOOR",
+					"value": "805748865",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_CLOSE_IRON_DOOR",
+					"value": "805814401",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BUBBLES",
+					"value": "12296",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_MOVING_WATER",
+					"value": "805896321",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SWISH_WATER",
+					"value": "805961857",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_QUIET_BUBBLE",
+					"value": "806027393",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_VOLCANO_EXPLOSION",
+					"value": "806125697",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_QUIET_BUBBLE2",
+					"value": "806158465",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_CASTLE_TRAP_OPEN",
+					"value": "806256769",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_WALL_EXPLOSION",
+					"value": "806289537",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_COIN",
+					"value": "940671105",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_COIN_WATER",
+					"value": "940736641",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SHORT_STAR",
+					"value": "806748305",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BIG_CLOCK",
+					"value": "806813825",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_LOUD_POUND",
+					"value": "12312",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_LOUD_POUND2",
+					"value": "12313",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SHORT_POUND1",
+					"value": "12314",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SHORT_POUND2",
+					"value": "12315",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SHORT_POUND3",
+					"value": "12316",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SHORT_POUND4",
+					"value": "12317",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SHORT_POUND5",
+					"value": "12318",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SHORT_POUND6",
+					"value": "12319",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_OPEN_CHEST",
+					"value": "824213633",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_CLAM_SHELL1",
+					"value": "824344705",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOX_LANDING",
+					"value": "807665793",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOX_LANDING_2",
+					"value": "841220225",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNKNOWN1",
+					"value": "807731329",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNKNOWN1_2",
+					"value": "841285761",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_CLAM_SHELL2",
+					"value": "807813249",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_PAINTING_EJECT",
+					"value": "958922881",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_LEVEL_SELECT_CHANGE",
+					"value": "808124545",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_PLATFORM",
+					"value": "808288385",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_DONUT_PLATFORM_EXPLOSION",
+					"value": "808329345",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOWSER_BOMB_EXPLOSION",
+					"value": "825163905",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_COIN_SPURT",
+					"value": "808452225",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_COIN_SPURT_2",
+					"value": "942669953",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_COIN_SPURT_EU",
+					"value": "942678145",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_EXPLOSION6",
+					"value": "12337",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNK32",
+					"value": "12338",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOAT_TILT1",
+					"value": "808730753",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOAT_TILT2",
+					"value": "808796289",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_COIN_DROP",
+					"value": "808861825",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNKNOWN3_LOWPRIO",
+					"value": "808910977",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNKNOWN3",
+					"value": "808943745",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNKNOWN3_2",
+					"value": "943161473",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_PENDULUM_SWING",
+					"value": "808976513",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_CHAIN_CHOMP1",
+					"value": "809042049",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_CHAIN_CHOMP2",
+					"value": "809107585",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_DOOR_TURN_KEY",
+					"value": "809173121",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_MOVING_IN_SAND",
+					"value": "809238657",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNKNOWN4_LOWPRIO",
+					"value": "809304193",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNKNOWN4",
+					"value": "809336961",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_MOVING_PLATFORM_SWITCH",
+					"value": "809369729",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_CAGE_OPEN",
+					"value": "809476225",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_QUIET_POUND1_LOWPRIO",
+					"value": "809500801",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_QUIET_POUND1",
+					"value": "809517185",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BREAK_BOX",
+					"value": "809615489",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_DOOR_INSERT_KEY",
+					"value": "809631873",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_QUIET_POUND2",
+					"value": "809697409",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BIG_POUND",
+					"value": "809762945",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNK45",
+					"value": "809828481",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNK46_LOWPRIO",
+					"value": "809894017",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_UNK46",
+					"value": "809926785",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_CANNON_UP",
+					"value": "809992321",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_GRINDEL_ROLL",
+					"value": "810025089",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_EXPLOSION7",
+					"value": "12361",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SHAKE_COFFIN",
+					"value": "12362",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_RACE_GUN_SHOT",
+					"value": "827146369",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_STAR_DOOR_OPEN",
+					"value": "810467457",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_STAR_DOOR_CLOSE",
+					"value": "810532993",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_POUND_ROCK",
+					"value": "810942593",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_STAR_APPEARS",
+					"value": "811073425",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_COLLECT_1UP",
+					"value": "811138945",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BUTTON_PRESS_LOWPRIO",
+					"value": "811204737",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BUTTON_PRESS",
+					"value": "811221121",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BUTTON_PRESS_2_LOWPRIO",
+					"value": "827981953",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BUTTON_PRESS_2",
+					"value": "827998337",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_ELEVATOR_MOVE",
+					"value": "811270273",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_ELEVATOR_MOVE_2",
+					"value": "828047489",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SWISH_AIR",
+					"value": "811335809",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SWISH_AIR_2",
+					"value": "828113025",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_HAUNTED_CHAIR",
+					"value": "811401345",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SOFT_LANDING",
+					"value": "811466881",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_HAUNTED_CHAIR_MOVE",
+					"value": "811532417",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOWSER_PLATFORM",
+					"value": "811761793",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOWSER_PLATFORM_2",
+					"value": "828539009",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_HEART_SPIN",
+					"value": "811909249",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_POUND_WOOD_POST",
+					"value": "811974785",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_WATER_LEVEL_TRIG",
+					"value": "812023937",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SWITCH_DOOR_OPEN",
+					"value": "812097665",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_RED_COIN",
+					"value": "812159105",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BIRDS_FLY_AWAY",
+					"value": "812187777",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_METAL_POUND",
+					"value": "812351617",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOING1",
+					"value": "812400769",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOING2_LOWPRIO",
+					"value": "812458113",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOING2",
+					"value": "812466305",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_YOSHI_WALK",
+					"value": "812523649",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_ENEMY_ALERT1",
+					"value": "812593281",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_YOSHI_TALK",
+					"value": "812658817",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_SPLATTERING",
+					"value": "812724353",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOING3",
+					"value": "12402",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_GRAND_STAR",
+					"value": "812843137",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_GRAND_STAR_JUMP",
+					"value": "812908673",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_BOAT_ROCK",
+					"value": "812974209",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL_VANISH_SFX",
+					"value": "813047937",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_WATERFALL1",
+					"value": "1073741825",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_WATERFALL2",
+					"value": "1073807361",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_ELEVATOR1",
+					"value": "1073872897",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_DRONING1",
+					"value": "1090715649",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_DRONING2",
+					"value": "1074003969",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_WIND1",
+					"value": "1074069505",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_MOVING_SAND_SNOW",
+					"value": "16390",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_UNK07",
+					"value": "16391",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_ELEVATOR2",
+					"value": "1074266113",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_WATER",
+					"value": "1074331649",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_UNKNOWN2",
+					"value": "1074397185",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_BOAT_ROCKING1",
+					"value": "1074462721",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_ELEVATOR3",
+					"value": "1074528257",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_ELEVATOR4",
+					"value": "1074593793",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_ELEVATOR4_2",
+					"value": "1091371009",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_MOVINGSAND",
+					"value": "1074659329",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_MERRY_GO_ROUND_CREAKING",
+					"value": "1074741249",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_WIND2",
+					"value": "1074823169",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_UNK12",
+					"value": "16402",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_SLIDING",
+					"value": "1074987009",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_STAR",
+					"value": "1075052561",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_UNKNOWN4",
+					"value": "1091895297",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_WATER_DRAIN",
+					"value": "1091960833",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_METAL_BOX_PUSH",
+					"value": "1075281921",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_ENV_SINK_QUICKSAND",
+					"value": "1075347457",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SUSHI_SHARK_WATER_SOUND",
+					"value": "1342210177",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_MRI_SHOOT",
+					"value": "1342242945",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BABY_PENGUIN_WALK",
+					"value": "1342308481",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOWSER_WALK",
+					"value": "1342374017",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOWSER_TAIL_PICKUP",
+					"value": "1342505089",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOWSER_DEFEATED",
+					"value": "1342570625",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOWSER_SPINNING",
+					"value": "1342636161",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOWSER_INHALING",
+					"value": "1342701697",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BIG_PENGUIN_WALK",
+					"value": "1342800001",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOO_BOUNCE_TOP",
+					"value": "1342832769",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOO_LAUGH_SHORT",
+					"value": "1342898305",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_THWOMP",
+					"value": "1343004801",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_CANNON1",
+					"value": "1343090817",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_CANNON2",
+					"value": "1343156353",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_CANNON3",
+					"value": "1343221889",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_JUMP_WALK_WATER",
+					"value": "20498",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_UNKNOWN2",
+					"value": "1343422593",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_MRI_DEATH",
+					"value": "1343488129",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_POUNDING1",
+					"value": "1343574145",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_POUNDING1_HIGHPRIO",
+					"value": "1343586433",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_WHOMP_LOWPRIO",
+					"value": "1343643777",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KING_BOBOMB",
+					"value": "1343651969",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BULLY_METAL",
+					"value": "1343717505",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BULLY_EXPLODE",
+					"value": "1343791233",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BULLY_EXPLODE_2",
+					"value": "1360568449",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_POUNDING_CANNON",
+					"value": "1343901825",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BULLY_WALK",
+					"value": "1343959169",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_UNKNOWN3",
+					"value": "1344110721",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_UNKNOWN4",
+					"value": "1344184449",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BABY_PENGUIN_DIVE",
+					"value": "1344225409",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_GOOMBA_WALK",
+					"value": "1344274561",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_UKIKI_CHATTER_LONG",
+					"value": "1344340097",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_MONTY_MOLE_ATTACK",
+					"value": "1344405633",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_EVIL_LAKITU_THROW",
+					"value": "1344413825",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_UNK23",
+					"value": "20515",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_DYING_ENEMY1",
+					"value": "1344553089",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_CANNON4",
+					"value": "1344618625",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_DYING_ENEMY2",
+					"value": "20518",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOBOMB_WALK",
+					"value": "1344733313",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SOMETHING_LANDING",
+					"value": "1344831617",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_DIVING_IN_WATER",
+					"value": "1344905345",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SNOW_SAND1",
+					"value": "1344929921",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SNOW_SAND2",
+					"value": "1344995457",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_DEFAULT_DEATH",
+					"value": "1345093761",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BIG_PENGUIN_YELL",
+					"value": "1345126529",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_WATER_BOMB_BOUNCING",
+					"value": "1345224833",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_GOOMBA_ALERT",
+					"value": "1345257601",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_WIGGLER_JUMP",
+					"value": "1345282177",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_STOMPED",
+					"value": "1345355905",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_UNKNOWN6",
+					"value": "1345388673",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_DIVING_INTO_WATER",
+					"value": "1345470593",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_PIRANHA_PLANT_SHRINK",
+					"value": "1345536129",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KOOPA_THE_QUICK_WALK",
+					"value": "1345593473",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KOOPA_WALK",
+					"value": "1345650817",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BULLY_WALKING",
+					"value": "1345740929",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_DORRIE",
+					"value": "1345806465",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOWSER_LAUGH",
+					"value": "1345880193",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_UKIKI_CHATTER_SHORT",
+					"value": "1345912961",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_UKIKI_CHATTER_IDLE",
+					"value": "1345978497",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_UKIKI_STEP_DEFAULT",
+					"value": "1346044033",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_UKIKI_STEP_LEAVES",
+					"value": "1346109569",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KOOPA_TALK",
+					"value": "1346216065",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KOOPA_DAMAGE",
+					"value": "1346281601",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KLEPTO1",
+					"value": "1346322561",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KLEPTO2",
+					"value": "1346396289",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KING_BOBOMB_TALK",
+					"value": "1346437249",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KING_BOBOMB_JUMP",
+					"value": "1346797697",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KING_WHOMP_DEATH",
+					"value": "1363656833",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOO_LAUGH_LONG",
+					"value": "1346896001",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_EEL",
+					"value": "1347027073",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_EEL_2",
+					"value": "1380581505",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_EYEROK_SHOW_EYE",
+					"value": "1380647041",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_MR_BLIZZARD_ALERT",
+					"value": "1347158145",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SNUFIT_SHOOT",
+					"value": "1347223681",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SKEETER_WALK",
+					"value": "1347289217",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_WALKING_WATER",
+					"value": "1347354753",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BIRD_CHIRP3",
+					"value": "1347502081",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_PIRANHA_PLANT_APPEAR",
+					"value": "1347690625",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_FLAME_BLOWN",
+					"value": "1347780737",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_MAD_PIANO_CHOMPING",
+					"value": "1381384321",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOBOMB_BUDDY_TALK",
+					"value": "1347960961",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SPINY_UNK59",
+					"value": "1348014209",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_WIGGLER_HIGH_PITCH",
+					"value": "1348223105",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_HEAVEHO_TOSSED",
+					"value": "1348288641",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_WIGGLER_DEATH",
+					"value": "20574",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BOWSER_INTRO_LAUGH",
+					"value": "1348436113",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_ENEMY_DEATH_HIGH",
+					"value": "1348513921",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_ENEMY_DEATH_LOW",
+					"value": "1348579457",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SWOOP_DEATH",
+					"value": "1348644993",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_KOOPA_FLYGUY_DEATH",
+					"value": "1348710529",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_POKEY_DEATH",
+					"value": "1348714625",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SNOWMAN_BOUNCE",
+					"value": "1348780161",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SNOWMAN_EXPLODE",
+					"value": "1348849793",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_POUNDING_LOUD",
+					"value": "1349009537",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_MIPS_RABBIT",
+					"value": "1349124225",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_MIPS_RABBIT_WATER",
+					"value": "1349255297",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_EYEROK_EXPLODE",
+					"value": "1349320833",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_CHUCKYA_DEATH",
+					"value": "1366163585",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_WIGGLER_TALK",
+					"value": "1349451905",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_WIGGLER_ATTACKED",
+					"value": "1349542017",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_WIGGLER_LOW_PITCH",
+					"value": "1349591169",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_SNUFIT_SKEETER_DEATH",
+					"value": "1349697665",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_BUBBA_CHOMP",
+					"value": "1349730433",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ_ENEMY_DEFEAT_SHRINK",
+					"value": "1349795969",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_BOWSER_SPIT_FIRE",
+					"value": "1610612737",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_UNK01",
+					"value": "24577",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_LAKITU_FLY",
+					"value": "1610776577",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_LAKITU_FLY_HIGHPRIO",
+					"value": "1610809089",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_AMP_BUZZ",
+					"value": "1610825729",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_BLOW_FIRE",
+					"value": "1610907649",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_BLOW_WIND",
+					"value": "1610891265",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_ROUGH_SLIDE",
+					"value": "1610940417",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_HEAVEHO_MOVE",
+					"value": "1611022337",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_UNK07",
+					"value": "24583",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_BOBOMB_LIT_FUSE",
+					"value": "1611161601",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_HOWLING_WIND",
+					"value": "1611235329",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_CHUCKYA_MOVE",
+					"value": "1611284481",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_PEACH_TWINKLE",
+					"value": "1611350017",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_AIR_CASTLE_OUTDOORS_AMBIENT",
+					"value": "1611677697",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_CHANGE_SELECT",
+					"value": "1879111809",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_REVERSE_PAUSE",
+					"value": "28673",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_PAUSE",
+					"value": "1879240833",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_PAUSE_HIGHPRIO",
+					"value": "1879244673",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_PAUSE_2",
+					"value": "1879310209",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_MESSAGE_APPEAR",
+					"value": "1879310465",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_MESSAGE_DISAPPEAR",
+					"value": "1879376001",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_CAMERA_ZOOM_IN",
+					"value": "1879441537",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_CAMERA_ZOOM_OUT",
+					"value": "1879507073",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_PINCH_MARIO_FACE",
+					"value": "1879572609",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_LET_GO_MARIO_FACE",
+					"value": "1879638145",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_HAND_APPEAR",
+					"value": "1879703681",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_HAND_DISAPPEAR",
+					"value": "1879769217",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_UNK0C",
+					"value": "1879834753",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_POWER_METER",
+					"value": "1879900289",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_CAMERA_BUZZ",
+					"value": "1879965825",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_CAMERA_TURN",
+					"value": "1880031361",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_UNK10",
+					"value": "28688",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_CLICK_FILE_SELECT",
+					"value": "1880162433",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_MESSAGE_NEXT_PAGE",
+					"value": "1880293505",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_COIN_ITS_A_ME_MARIO",
+					"value": "1880359041",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_YOSHI_GAIN_LIVES",
+					"value": "1880424577",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_ENTER_PIPE",
+					"value": "1880531073",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_EXIT_PIPE",
+					"value": "1880596609",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_BOWSER_LAUGH",
+					"value": "1880653953",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_ENTER_HOLE",
+					"value": "1897496705",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_CLICK_CHANGE_VIEW",
+					"value": "1880785025",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_CAMERA_UNUSED1",
+					"value": "28699",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_CAMERA_UNUSED2",
+					"value": "28700",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_MARIO_CASTLE_WARP",
+					"value": "1880993921",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_STAR_SOUND",
+					"value": "1881079681",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_THANK_YOU_PLAYING_MY_GAME",
+					"value": "1881145217",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_READ_A_SIGN",
+					"value": "28704",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_EXIT_A_SIGN",
+					"value": "28705",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_MARIO_CASTLE_WARP2",
+					"value": "1881284737",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_STAR_SOUND_OKEY_DOKEY",
+					"value": "1881407361",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_STAR_SOUND_LETS_A_GO",
+					"value": "1881472897",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_COLLECT_RED_COIN",
+					"value": "2015924353",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_MENU_COLLECT_SECRET",
+					"value": "1882202241",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_BOBOMB_EXPLOSION",
+					"value": "2150506625",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_PURPLE_SWITCH",
+					"value": "2151596161",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_ROTATING_BLOCK_CLICK",
+					"value": "2151678081",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_SPINDEL_ROLL",
+					"value": "2152210561",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_PYRAMID_TOP_SPIN",
+					"value": "2169233537",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_PYRAMID_TOP_EXPLOSION",
+					"value": "2169303169",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_BIRD_CHIRP2",
+					"value": "2152742913",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_SWITCH_TICK_FAST",
+					"value": "2153050129",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_SWITCH_TICK_SLOW",
+					"value": "2153115665",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_STAR_APPEARS",
+					"value": "2153250705",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_ROTATING_BLOCK_ALERT",
+					"value": "2153316481",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_BOWSER_EXPLODE",
+					"value": "2153775233",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_BOWSER_KEY",
+					"value": "2153840769",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_1UP_APPEAR",
+					"value": "2154025089",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_GENERAL2_RIGHT_ANSWER",
+					"value": "2154471553",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_BOWSER_ROAR",
+					"value": "2416181377",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_PIRANHA_PLANT_BITE",
+					"value": "2416988289",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_PIRANHA_PLANT_DYING",
+					"value": "2417057921",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_BOWSER_PUZZLE_PIECE_MOVE",
+					"value": "2417565825",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_BULLY_ATTACKED",
+					"value": "2417754241",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_KING_BOBOMB_DAMAGE",
+					"value": "2437038209",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_SCUTTLEBUG_WALK",
+					"value": "2420326529",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_SCUTTLEBUG_ALERT",
+					"value": "2420392065",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_BABY_PENGUIN_YELL",
+					"value": "2420441217",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_SWOOP",
+					"value": "2420703361",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_BIRD_CHIRP1",
+					"value": "2421309441",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_LARGE_BULLY_ATTACKED",
+					"value": "2421620865",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_EYEROK_SOUND_SHORT",
+					"value": "2472149121",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_WHOMP_SOUND_SHORT",
+					"value": "2472198273",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_EYEROK_SOUND_LONG",
+					"value": "2455437441",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_BOWSER_TELEPORT",
+					"value": "2422636673",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_MONTY_MOLE_APPEAR",
+					"value": "2422702209",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_BOSS_DIALOG_GRUNT",
+					"value": "2422816897",
+					"hidden": false
+				},
+				{
+					"name": "SOUND_OBJ2_MRI_SPINNING",
+					"value": "2422931585",
+					"hidden": false
+				}
+			]
+		}
+	]
+}
