@@ -3,7 +3,7 @@
 An extension for Game Maker 8 that integrates [libsm64](https://github.com/libsm64/libsm64).<br/>
 If you want to mod games with this, you'll need Game Maker 8 Pro.
 
-An example project is located in the 'gmk' folder.
+You can find example projects in the "examples" directory.
 
 ![img](screenshot.png)
 
