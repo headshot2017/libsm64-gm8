@@ -60,7 +60,7 @@ $(LIB_H_FILE): src/libsm64.h
 
 extension: $(LIB_FILE)
 	python gm82gex.py libsm64-gm8.gej --noinstall
-	mv libsm64-gm8.gex gmk/
+	mv libsm64-gm8.gex dist/
 
 
 test/level.c test/level.h: ./import-test-collision.py

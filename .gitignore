@@ -7,5 +7,5 @@ compile_commands.json
 *.gb1
 *.ged
 *.gex
-gmk/*.dll
+examples/*.dll
 texture.png
