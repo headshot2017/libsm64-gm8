@@ -1,7 +1,7 @@
 #include "load_anim_data.h"
 
 #include <stdlib.h>
-
+	
 static uint32_t s_num_entries = 0;
 static struct Animation *s_libsm64_mario_animations = NULL;
 
