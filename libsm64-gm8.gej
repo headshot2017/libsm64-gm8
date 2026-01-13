@@ -27,10 +27,19 @@
 					"returntype": 2
 				},
 				{
+					"name": "libsm64_terminate",
+					"extname": "gm8_libsm64_terminate",
+					"calltype": 11,
+					"helpline": "libsm64_terminate(): De-initialize the library",
+					"hidden": false,
+					"argtypes": [],
+					"returntype": 2
+				},
+				{
 					"name": "libsm64_mario_create",
 					"extname": "gm8_libsm64_mario_create",
 					"calltype": 11,
-					"helpline": "libsm64_init(x,y,z): Create an instance of Mario in specified x,y,z coordinates and returns Mario ID",
+					"helpline": "libsm64_mario_create(x,y,z): Create an instance of Mario in specified x,y,z coordinates and returns Mario ID",
 					"hidden": false,
 					"argtypes": [
 						2,
@@ -40,10 +49,21 @@
 					"returntype": 2
 				},
 				{
+					"name": "libsm64_mario_delete",
+					"extname": "gm8_libsm64_mario_delete",
+					"calltype": 11,
+					"helpline": "libsm64_mario_delete(id): Delete a Mario instance",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
 					"name": "libsm64_mario_set_input",
 					"extname": "gm8_libsm64_mario_set_input",
 					"calltype": 11,
-					"helpline": "libsm64_mario_set_input(jump,attack,crouch,camX,camZ,stickX,stickY): Set Mario instance's input",
+					"helpline": "libsm64_mario_set_input(id,jump,attack,crouch,camX,camZ,stickX,stickY): Set Mario instance's input",
 					"hidden": false,
 					"argtypes": [
 						2,

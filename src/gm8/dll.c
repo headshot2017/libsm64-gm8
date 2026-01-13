@@ -162,7 +162,14 @@ DLLEXPORT double gm8_libsm64_init()
 
 	surfaces = 0;
 	surfaces_count = 0;
+	marioGeometry.position = 0;
 
+    return 1;
+}
+
+DLLEXPORT double gm8_libsm64_terminate()
+{
+    sm64_global_terminate();
     return 1;
 }
 
@@ -226,13 +233,22 @@ DLLEXPORT double gm8_libsm64_mario_create(double x, double y, double z)
 {
     int32_t marioId = sm64_mario_create( x, y, z );
 
-    marioGeometry.position = (float*)malloc( sizeof(float) * 9 * SM64_GEO_MAX_TRIANGLES );
-    marioGeometry.color    = (float*)malloc( sizeof(float) * 9 * SM64_GEO_MAX_TRIANGLES );
-    marioGeometry.normal   = (float*)malloc( sizeof(float) * 9 * SM64_GEO_MAX_TRIANGLES );
-    marioGeometry.uv       = (float*)malloc( sizeof(float) * 6 * SM64_GEO_MAX_TRIANGLES );
-    marioGeometry.numTrianglesUsed = 0;
+    if (marioGeometry.position == 0)
+    {
+        marioGeometry.position = (float*)malloc( sizeof(float) * 9 * SM64_GEO_MAX_TRIANGLES );
+        marioGeometry.color    = (float*)malloc( sizeof(float) * 9 * SM64_GEO_MAX_TRIANGLES );
+        marioGeometry.normal   = (float*)malloc( sizeof(float) * 9 * SM64_GEO_MAX_TRIANGLES );
+        marioGeometry.uv       = (float*)malloc( sizeof(float) * 6 * SM64_GEO_MAX_TRIANGLES );
+        marioGeometry.numTrianglesUsed = 0;
+    }
 
     return (double)marioId;
+}
+
+DLLEXPORT double gm8_libsm64_mario_delete(double id)
+{
+    sm64_mario_delete((int32_t)id);
+    return 1;
 }
 
 DLLEXPORT double gm8_libsm64_mario_set_input(double id, double A, double B, double Z, double camX, double camZ, double stickX, double stickY)
