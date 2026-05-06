@@ -305,6 +305,11 @@ DLLEXPORT double gm8_libsm64_mario_get_velZ(double id)
     return marioState.velocity[2];
 }
 
+DLLEXPORT double gm8_libsm64_mario_get_forwardVel(double id)
+{
+    return marioState.forwardVel;
+}
+
 DLLEXPORT double gm8_libsm64_mario_get_faceAngle(double id)
 {
     return marioState.faceAngle;

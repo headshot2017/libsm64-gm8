@@ -318,6 +318,17 @@
 					"returntype": 2
 				},
 				{
+					"name": "libsm64_mario_get_forwardVel",
+					"extname": "gm8_libsm64_mario_get_forwardVel",
+					"calltype": 11,
+					"helpline": "libsm64_mario_get_forwardVel(id): Get a Mario's forward velocity",
+					"hidden": false,
+					"argtypes": [
+						2
+					],
+					"returntype": 2
+				},
+				{
 					"name": "libsm64_mario_get_faceAngle",
 					"extname": "gm8_libsm64_mario_get_faceAngle",
 					"calltype": 11,
